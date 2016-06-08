@@ -1,0 +1,17 @@
+<div ng-controller="bookController">
+<button type="button" ui-sref="index" ui-sref-active="active">首页</button>
+  <table>
+    <tr>
+       <th>序号</th>
+       <th>书籍名</th>
+       <th>书架名</th>
+       <th>操作</th>
+    </tr>
+    <tr ng-repeat="b in books">
+    	<td>{{$index + 1}}</td>
+    	<td>{{b.name}}</td>
+    	<td>{{b.bookself.name}}</td>
+    	<td><button type="button" ng-click="del(b.id)">删除</button></td>
+    </tr>
+  </table>
+</div>
